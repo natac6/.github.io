@@ -4,9 +4,11 @@ import { AiFillDislike, AiFillLike } from "react-icons/ai";
 import { format } from "date-fns";
 
 export default function Home() {
+   // State to store the list of words and the current word being searched
   const [words, setWords] = useState([]);
   const [word, setWord] = useState("");
 
+   // useEffect hook to fetch word definitions when the 'word' state changes
   useEffect(() => {
     // The function for fetching the definition based on the entered word
     async function getDefinition() {
@@ -38,7 +40,7 @@ export default function Home() {
   return (
     <div className="px-8">
       <h1 className="text-neutral-950 font-bold text-4xl lg:text-5xl my-12 lg:my-16 text-center">
-        Natasha's Urban Dictionary
+        Natasha&apos;s Urban Dictionary
       </h1>
 
       <section className="max-w-4xl mx-auto">
